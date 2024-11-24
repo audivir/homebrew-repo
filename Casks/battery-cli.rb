@@ -4,7 +4,6 @@ cask "battery-cli" do
   homepage "https://github.com/audivir/battery-cli/"
   sha256 "4b342cbebcc13656749951a37a978b49fe3a1a9b73b3bc8dca655f24bbd1767b"
   url "https://github.com/audivir/battery-cli/archive/refs/tags/0.9.0.tar.gz"
-  license "MIT"
 
   depends_on macos: ">= :catalina"
   depends_on arch: :arm64
