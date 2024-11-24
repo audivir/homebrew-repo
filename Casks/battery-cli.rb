@@ -1,10 +1,10 @@
 cask "battery-cli" do
-  version "1.2.3"
-  # sha256 "dc0ce58181bc53bbd4f2c500162e529067bd7d234962c8c7abfd7539c6e392ad"
-  url "file:///Users/tim/battery-cli/src.tar.gz"
-  name "Battery"
+  name "Battery CLI"
   desc "CLI for managing battery charging."
-  homepage "https://github.com/actuallymentor/battery/"
+  homepage "https://github.com/audivir/battery-cli/"
+  sha256 "4b342cbebcc13656749951a37a978b49fe3a1a9b73b3bc8dca655f24bbd1767b"
+  url "https://github.com/audivir/battery-cli/archive/refs/tags/0.9.0.tar.gz"
+  license "MIT"
 
   depends_on macos: ">= :catalina"
   depends_on arch: :arm64
