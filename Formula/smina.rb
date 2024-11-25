@@ -1,13 +1,10 @@
-
 class Smina < Formula
-    version "2021.12.01"
-    sha256 "d2d9f5162f3e0e407376421d3f78cfc69d062f44bb0ea2d65ee1ae2bfacf418b"
-
-    url "https://altushost-swe.dl.sourceforge.net/project/smina/smina.osx.12"
-    name "Smina"
     desc "Fork of AutoDock Vina"
     homepage "http://pubs.acs.org/doi/abs/10.1021/ci300604z"
-
+    url "https://altushost-swe.dl.sourceforge.net/project/smina/smina.osx.12"
+    sha256 "d2d9f5162f3e0e407376421d3f78cfc69d062f44bb0ea2d65ee1ae2bfacf418b"
+    version "2021.12.01"
+    
     def install
         bin.install "smina.osx.12" => "smina"
     end
