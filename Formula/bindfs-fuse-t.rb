@@ -24,6 +24,7 @@ class BindfsFuseT < Formula
 
   def install
     # We need to run ./autogen.sh when building from git
+    ENV["PKG_CONFIG"] = Formula["pkg-config"].opt_bin/"pkg-config"
     system "./autogen.sh"
     system "./configure", *std_configure_args
     system "make"
