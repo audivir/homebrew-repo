@@ -20,7 +20,7 @@ class BindfsFuseT < Formula
   # depends_on "libtool" => :build
 
   # As per the README, fuse-t is the dependency for macOS
-  depends_on cask: "fuse-t"
+  # depends_on cask: "fuse-t"
 
   def install
     # We need to run ./autogen.sh when building from git
