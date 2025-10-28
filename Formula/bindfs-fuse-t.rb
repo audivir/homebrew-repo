@@ -25,7 +25,7 @@ class BindfsFuseT < Formula
   def install
     # We need to run ./autogen.sh when building from git
     ENV["PKG_CONFIG_LIBDIR"] = "/usr/local/lib/pkgconfig"
-    ENV.append "LDFLAGS", "-L/usr/local/lib/test"
+    # ENV.append "LDFLAGS", "-L/usr/local/lib/test"
     system "./autogen.sh"
     system "./configure", *std_configure_args
     system "make"
