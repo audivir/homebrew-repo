@@ -4,7 +4,7 @@ cask "sshfs" do
 
     desc "File system client based on SSH File Transfer Protocol"
     homepage "https://osxfuse.github.io/"
-    url "https://github.com/osxfuse/sshfs/releases/download/osxfuse-sshfs-$VERSION/sshfs-#{version}.pkg"
+    url "https://github.com/osxfuse/sshfs/releases/download/osxfuse-sshfs-#{version}/sshfs-#{version}.pkg"
 
 
     pkg "sshfs-#{version}.pkg"
