@@ -2,26 +2,26 @@ class MicromambaStatic < Formula
   desc "Fast Cross-Platform Package Manager"
   homepage "https://github.com/mamba-org/mamba"
   license "BSD-3-Clause"
-  version "2.3.0"# head "https://github.com/mamba-org/mamba.git", branch: "main"
+  version "2.4.0" # head "https://github.com/mamba-org/mamba.git", branch: "main"
 
   on_linux do
     on_arm do
   	  url "https://micro.mamba.pm/api/micromamba/linux-aarch64/latest"
-      sha256 "9c7262a340c8aedaec668f0cd47e8bdd663087222fe4b39282bf3d52a52a39b8"
+      sha256 "9dd1e427bb173730d57a025a7536b3e036af8890b28f524b53f7a4b53e373ced"
     end
     on_intel do
       url "https://micro.mamba.pm/api/micromamba/linux-64/latest"
-      sha256 "0669b73f6cb21548f76c4c2aa416b2e1ec397d3f987b73c558ebfc89dd5c9f8c"
+      sha256 "3dbcca4c4b3e64e2b0c7ca7121307e687b6c10ce7fe889f21d5c10d817f983a9"
     end
   end
   on_macos do
     on_arm do
   	  url "https://micro.mamba.pm/api/micromamba/osx-arm64/latest"
-      sha256 "f8a21556f5f085e81d816961d6d9773d31293da17ca27500b1e1f5c899070321"
+      sha256 "55754cabf1c892fd057251138559eda3464616639acab384264b45c4fbc6e8aa"
     end
     on_intel do
       url "https://micro.mamba.pm/api/micromamba/osx-64/latest"
-      sha256 "da60f2e2aa9f835bee6586d6b58e64caa14f9a06014331316f551f2c78444f7f"
+      sha256 "89334976546685aa875a619643c0ef12a1269e6d8df66e6f8696d0a1c47af044"
     end
   end
   
