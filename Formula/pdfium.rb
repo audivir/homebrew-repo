@@ -5,20 +5,22 @@ class Pdfium < Formula
   version "7678" 
 
   on_macos do
-    if Hardware::CPU.arm?
+    on_arm do
       url "https://github.com/bblanchon/pdfium-binaries/releases/download/chromium/#{version}/pdfium-mac-arm64.tgz"
       sha256 "80bf5fe0317b06c6ac771125d57a404c4f196d507287fecff63584900ef4953f"
-    else
+    end
+    on_intel do
       url "https://github.com/bblanchon/pdfium-binaries/releases/download/chromium/#{version}/pdfium-mac-x64.tgz"
       sha256 "80ff74fda755237de1df2feda6972aafbd82828be23836093c5708063c815af8"
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm?
+    on_arm do
       url "https://github.com/bblanchon/pdfium-binaries/releases/download/chromium/#{version}/pdfium-linux-arm64.tgz"
       sha256 "2e8a639a3c80e19d61b193177d588069f05c8d91724f5ca53b8a3abd12dea11a"
-    else
+    end
+    on_intel do
       url "https://github.com/bblanchon/pdfium-binaries/releases/download/chromium/#{version}/pdfium-linux-x64.tgz"
       sha256 "80ff74fda755237de1df2feda6972aafbd82828be23836093c5708063c815af8"
     end
