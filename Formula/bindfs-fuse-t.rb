@@ -15,7 +15,7 @@ class BindfsFuseT < Formula
 
   def install
     # check if fuse-t is installed else die
-    if ! File.exist?("/usr/local/lib/libfuse-t.dylib")
+    unless File.exist?("/usr/local/lib/libfuse-t.dylib")
       odie "fuse-t is not installed. Please install it first: brew install --cask fuse-t"
     end
     ENV.append_path "HOMEBREW_LIBRARY_PATHS", "/usr/local/lib"
