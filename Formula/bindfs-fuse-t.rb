@@ -11,10 +11,16 @@ class BindfsFuseT < Formula
   depends_on "automake" => :build
   depends_on "pkg-config" => :build
 
+  on_macos do
+    depends_on "fuse-t"
+  end
+
   conflicts_with "bindfs", because: "it installs the same binaries"
 
   def install
-    ENV["PKG_CONFIG_LIBDIR"] = "/usr/local/lib/pkgconfig"
+    ENV.append_path "HOMEBREW_LIBRARY_PATHS", "/usr/local/lib"
+    ENV.append_path "HOMEBREW_INCLUDE_PATHS", "/usr/local/include"
+    ENV.append_path "PKG_CONFIG_PATH", "/usr/local/lib/pkgconfig"
     system "./autogen.sh"
     system "./configure", *std_configure_args
     system "make"
