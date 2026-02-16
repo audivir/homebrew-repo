@@ -11,11 +11,11 @@ class Uvc < Formula
     end
 
     def caveats
-    <<~EOS
-      Please run the following to setup your shell:
-        #{bin}/uvc shellenv <zsh|bash> >> <~/.zshrc|~/.bashrc>
-      and restart your terminal.
-    EOS
+      <<~EOS
+        Please run the following to setup your shell:
+          #{bin}/uvc shellenv <zsh|bash> >> <~/.zshrc|~/.bashrc>
+        and restart your terminal.
+      EOS
     end
 
     test do

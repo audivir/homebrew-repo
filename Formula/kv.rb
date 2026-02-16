@@ -7,9 +7,17 @@ class Kv < Formula
   license "MIT"
 
   depends_on "rust" => :build
+  depends_on "pdfium"
 
   def install
     system "cargo", "install", *std_cargo_args
+  end
+
+  def caveats
+    <<~EOS
+      For full functionality, you may need to install libreoffice:
+        brew install libreoffice
+    EOS
   end
 
   test do
