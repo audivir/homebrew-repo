@@ -15,6 +15,6 @@ class Smc < Formula
   end
 
   test do
-    assert_match "0.01", shell_output("#{bin}/smc -v", 1)
+    assert_match version.to_s, shell_output("#{bin}/smc -v", 1)
   end
 end

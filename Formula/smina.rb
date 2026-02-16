@@ -10,6 +10,6 @@ class Smina < Formula
     end
 
     test do
-        system bin/"smina", "--version"
+        assert_match "Built Dec  1 2021", shell_output("#{bin}/smina --version")
     end
 end
