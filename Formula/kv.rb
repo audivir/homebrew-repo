@@ -1,9 +1,9 @@
 class Kv < Formula
-  desc "A image viewer for the Kitty Terminal Graphics Protocol."
+  desc "Image viewer for the Kitty Terminal Graphics Protocol"
   homepage "https://github.com/audivir/kv"
   url "https://github.com/audivir/kv.git",
       tag:      "0.2.0",
-      revision: "b224598e61d9be05f0b1aab725a76caaec0c3b6c" 
+      revision: "b224598e61d9be05f0b1aab725a76caaec0c3b6c"
   license "MIT"
 
   depends_on "rust" => :build
