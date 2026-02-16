@@ -10,13 +10,12 @@ class Dfhash < Formula
 
   def install
     nightly_version = "nightly-2026-01-28"
-
     ENV["RUSTUP_HOME"] = buildpath/".rustup"
     ENV["CARGO_HOME"] = buildpath/".cargo"
-    
+    ENV.prepend_path "PATH", buildpath/".cargo/bin"
     system "rustup", "toolchain", "install", nightly_version
-    
-    system "#{buildpath}/.cargo/bin/cargo", "+#{nightly_version}", "install", *std_cargo_args
+    system "rustup", "default", nightly_version
+    system "cargo", "install", *std_cargo_args
   end
 
   test do
