@@ -13,8 +13,11 @@ class MkpasswdGo < Formula
     end
 
     def install
-        ENV["PKG_CONFIG_PATH"] = "#{opt_path}/libxcrypt/lib/pkgconfig" if OS.mac?
-        system "go", "build", "-o", "mkpasswd-go", "github.com/audivir/mkpasswd-go"
+        if OS.mac?
+            ENV.append "CPATH", Formula["libxcrypt"].opt_include
+            ENV.append "LIBRARY_PATH", Formula["libxcrypt"].opt_lib
+        end
+        system "go", "build", *std_go_args(ldflags: "-s -w"), "-o", "mkpasswd-go"
         bin.install "mkpasswd-go"
     end
 
