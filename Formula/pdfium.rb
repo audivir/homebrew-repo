@@ -1,28 +1,28 @@
 class Pdfium < Formula
   desc "Binary distribution of PDFium (without V8)"
   homepage "https://github.com/bblanchon/pdfium-binaries"
+  version "7690"
   license "Apache-2.0"
-  version "7678" 
 
   on_macos do
     on_arm do
       url "https://github.com/bblanchon/pdfium-binaries/releases/download/chromium/#{version}/pdfium-mac-arm64.tgz"
-      sha256 "80bf5fe0317b06c6ac771125d57a404c4f196d507287fecff63584900ef4953f"
+      sha256 "0617e90556273ebe484d5f4a9981f366e10b4874f997896a4d27fe87d3c71ecf"
     end
     on_intel do
       url "https://github.com/bblanchon/pdfium-binaries/releases/download/chromium/#{version}/pdfium-mac-x64.tgz"
-      sha256 "80ff74fda755237de1df2feda6972aafbd82828be23836093c5708063c815af8"
+      sha256 "04bc0a7696452c903f006812d877250cdbc462bfe785ec79bb41b7d145f5774f"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/bblanchon/pdfium-binaries/releases/download/chromium/#{version}/pdfium-linux-arm64.tgz"
-      sha256 "2e8a639a3c80e19d61b193177d588069f05c8d91724f5ca53b8a3abd12dea11a"
+      sha256 "76ee55e238ccd226b55de569217dd93aba71ffdb5368d5f72b5c2b49fab6dee0"
     end
     on_intel do
       url "https://github.com/bblanchon/pdfium-binaries/releases/download/chromium/#{version}/pdfium-linux-x64.tgz"
-      sha256 "80ff74fda755237de1df2feda6972aafbd82828be23836093c5708063c815af8"
+      sha256 "addd9f59beea62536ad45f0ca6d38fb6088ba20a7260443deb595852fb51eac3"
     end
   end
 
@@ -55,7 +55,7 @@ class Pdfium < Formula
         return 0;
       }
     EOS
-    
+
     system ENV.cc, "test.c", "-I#{include}", "-L#{lib}", "-lpdfium", "-o", "test"
     system "./test"
   end
