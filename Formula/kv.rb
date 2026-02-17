@@ -7,7 +7,7 @@ class Kv < Formula
   license "MIT"
 
   depends_on "rust" => :build
-  depends_on "pdfium"
+  depends_on "libpdfium"
 
   def install
     system "cargo", "install", *std_cargo_args
