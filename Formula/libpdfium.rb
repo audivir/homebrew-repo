@@ -1,4 +1,4 @@
-class Pdfium < Formula
+class Libpdfium < Formula
   desc "Binary distribution of PDFium (without V8)"
   homepage "https://github.com/bblanchon/pdfium-binaries"
   version "7690"
