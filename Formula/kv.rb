@@ -6,18 +6,18 @@ class Kv < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/audivir/kv/releases/download/v#{version}/kv-darwin-arm64"
-      sha256 "70bb58f7882c79819c8dca22acc87aec423c52f66d4dce0f721513b53e7ae201"
+      sha256 "6f438ac8de2e215e7add3e538e509243ef682b299da5e112ee24946a0700e005"
     else
       url "https://github.com/audivir/kv/releases/download/v#{version}/kv-darwin-amd64"
-      sha256 "cc24b8893644110ddf1b89a136d3f7640143dc28c5579f76d69b54008059c311"
+      sha256 "4d4af744609b60f807410ae46b42c74ee191c97ab07ef3adb8ec5e0efa6ae137"
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/audivir/kv/releases/download/v#{version}/kv-linux-arm64"
-      sha256 "cb7b94ff448d71977f09e0cdcbe606a45864b0b9fb5c0fac34892680b32139f9"
+      sha256 "2b45038cfcc8a347fa0da169ebfddb5e2cb2b9988aa7ddd7392d7f6445f1efbe"
     else
       url "https://github.com/audivir/kv/releases/download/v#{version}/kv-linux-amd64"
-      sha256 "e3c719e13af982178e75c65d71dfaebcfcdc40eb4673de371766523290efefd6"
+      sha256 "74a975455b1db09d63b468ad1e5edbb5602330356a93f2b456f605c407316f0f"
     end
   end
 
