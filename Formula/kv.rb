@@ -1,6 +1,7 @@
 class Kv < Formula
   desc "Image viewer for the Kitty Terminal Graphics Protocol"
   homepage "https://github.com/audivir/kv"
+  version "0.2.3"
 
   if OS.mac?
     if Hardware::CPU.arm?
