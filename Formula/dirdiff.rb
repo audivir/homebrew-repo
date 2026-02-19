@@ -34,6 +34,6 @@ class Dirdiff < Formula
 
   test do
     # Updated to match our latest usage text
-    assert_match "dirdiff version 0.1.2", shell_output("#{bin}/dirdiff --version")
+    assert_match "dirdiff version #{version}", shell_output("#{bin}/dirdiff --version")
   end
 end
