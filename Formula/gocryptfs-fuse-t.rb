@@ -22,7 +22,7 @@ class GocryptfsFuseT < Formula
     unless File.exist?("/usr/local/lib/libfuse-t.dylib")
       odie "fuse-t is not installed. Please install it first: brew install --cask fuse-t"
     end
-    system "go", "mod", "edit", "-replace", "github.com/hanwen/go-fuse/v2=github.com/macos-fuse-t/go-fuse/v2@5340a18"
+    system "go", "mod", "edit", "-replace", "github.com/hanwen/go-fuse/v2=github.com/audivir/go-fuse/v2@5340a18"
     system "go", "mod", "tidy"
     system "bash", "build.bash"
     bin.install "gocryptfs"
