@@ -9,7 +9,7 @@ class BindfsFuseT < Formula
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
-  depends_on "pkg-config" => :build
+  depends_on "pkgconf" => :build
 
   conflicts_with "bindfs", because: "it installs the same binaries"
 
