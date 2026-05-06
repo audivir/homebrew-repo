@@ -1,24 +1,24 @@
 class MicromambaStatic < Formula
   desc "Fast Cross-Platform Package Manager"
   homepage "https://github.com/mamba-org/mamba"
-  version "2.6.0"
+  version "2.6.0-0"
   license "BSD-3-Clause"
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://api.anaconda.org/download/conda-forge/micromamba/#{version}/osx-arm64/micromamba-#{version}-2.tar.bz2"
-      sha256 "7c7bb56ba2fc7569eb2821828e8a42e64725b61a4bf00868d553752e832fab61"
+      url "https://github.com/mamba-org/micromamba-releases/releases/#{version}/micromamba-osx-arm64.tar.bz2"
+      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
     else
-      url "https://api.anaconda.org/download/conda-forge/micromamba/#{version}/osx-64/micromamba-#{version}-2.tar.bz2"
-      sha256 "7c7bb56ba2fc7569eb2821828e8a42e64725b61a4bf00868d553752e832fab61"
+      url "https://github.com/mamba-org/micromamba-releases/releases/#{version}/micromamba-osx-64.tar.bz2"
+      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
-      url "https://api.anaconda.org/download/conda-forge/micromamba/#{version}/linux-aarch64/micromamba-#{version}-2.tar.bz2"
-      sha256 "7c7bb56ba2fc7569eb2821828e8a42e64725b61a4bf00868d553752e832fab61"
+      url "https://github.com/mamba-org/micromamba-releases/releases/#{version}/micromamba-linux-aarch64.tar.bz2"
+      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
     else
-      url "https://api.anaconda.org/download/conda-forge/micromamba/#{version}/linux-64/micromamba-#{version}-2.tar.bz2"
-      sha256 "7c7bb56ba2fc7569eb2821828e8a42e64725b61a4bf00868d553752e832fab61"
+      url "https://github.com/mamba-org/micromamba-releases/releases/#{version}/micromamba-linux-64.tar.bz2"
+      sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
     end
   end
 
