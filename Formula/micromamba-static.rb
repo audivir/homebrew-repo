@@ -6,18 +6,18 @@ class MicromambaStatic < Formula
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/mamba-org/micromamba-releases/releases/#{version}/micromamba-osx-arm64.tar.bz2"
+      url "https://github.com/mamba-org/micromamba-releases/releases/download/#{version}/micromamba-osx-arm64.tar.bz2"
       sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
     else
-      url "https://github.com/mamba-org/micromamba-releases/releases/#{version}/micromamba-osx-64.tar.bz2"
+      url "https://github.com/mamba-org/micromamba-releases/releases/download/#{version}/micromamba-osx-64.tar.bz2"
       sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/mamba-org/micromamba-releases/releases/#{version}/micromamba-linux-aarch64.tar.bz2"
+      url "https://github.com/mamba-org/micromamba-releases/releases/download/#{version}/micromamba-linux-aarch64.tar.bz2"
       sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
     else
-      url "https://github.com/mamba-org/micromamba-releases/releases/#{version}/micromamba-linux-64.tar.bz2"
+      url "https://github.com/mamba-org/micromamba-releases/releases/download/#{version}/micromamba-linux-64.tar.bz2"
       sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
     end
   end
