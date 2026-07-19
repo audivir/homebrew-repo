@@ -284,6 +284,18 @@ class ScpDownloadStrategy < AbstractFileDownloadStrategy
   end
 end
 
+# NetrcDownloadStrategy uses curl's --netrc flag to authenticate downloads
+# via standard ~/.netrc credentials.
+class NetrcDownloadStrategy < CurlDownloadStrategy
+  private
+
+  def _fetch(url:, resolved_url:, timeout:)
+    # Append "--netrc" to the standard curl arguments
+    curl_download url, "--netrc", to: temporary_path
+  end
+end
+
+
 class DownloadStrategyDetector
   class << self
     module Compat
@@ -316,6 +328,8 @@ class DownloadStrategyDetector
           S3DownloadStrategy
         when :scp
           ScpDownloadStrategy
+        when :netrc
+          NetrcDownloadStrategy
         else
           super(symbol)
         end
