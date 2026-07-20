@@ -295,7 +295,6 @@ class NetrcDownloadStrategy < CurlDownloadStrategy
   end
 end
 
-
 class DownloadStrategyDetector
   class << self
     module Compat
