@@ -2,8 +2,8 @@ class Uvc < Formula
     desc "Conda-like wrapper for uv"
     homepage "https://github.com/audivir/uvc"
     url "https://github.com/audivir/uvc.git",
-        tag:      "v0.1.0",
-        revision: "eddc90dc6cc2c86b62e978a168d1b5e26216a192"
+        tag:      "v0.1.1",
+        revision: "8f8ac1626ec4a062d7073a855ca069e513aa48e4"
     license "MIT"
 
     def install
