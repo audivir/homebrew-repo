@@ -1,23 +1,23 @@
 class Dirdiff < Formula
   desc "Recursively compare two local or ssh-remote directories"
   homepage "https://github.com/audivir/dirdiff"
-  version "0.1.5"
+  version "0.1.6"
 
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/audivir/dirdiff/releases/download/v#{version}/dirdiff-darwin-arm64"
-      sha256 "8761eb346116db5d5dce2b3738d1e9926d3c50152b56cc673670ddaeaf89f37a"
+      sha256 "0eb59b84d9d47759992965f537fa0628ec5e566914ec5fd1080eaaa0a9ac6118"
     else
       url "https://github.com/audivir/dirdiff/releases/download/v#{version}/dirdiff-darwin-amd64"
-      sha256 "a90fa1e6dc35338275bb4fef048aba9b8897187fba615ced628b036a46528ddc"
+      sha256 "dbba33ff0ab625c0feb6bef6cc2bb3eac947db2b20053b457d46749f6a68e35c"
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/audivir/dirdiff/releases/download/v#{version}/dirdiff-linux-arm64"
-      sha256 "ab8f7e87747b641d69df8e1e98f39798a34ecaab4c110422e890e8884ca3ee47"
+      sha256 "1bd1a16e02e04ae19a3bbd14de71da46df441cd4f9dd85ce0ff1f299e5e98434"
     else
       url "https://github.com/audivir/dirdiff/releases/download/v#{version}/dirdiff-linux-amd64"
-      sha256 "fbb9bf375e37b59bc68a31dad99d8562f8063655c3d975d335737c6c52d406b6"
+      sha256 "ab50d01a1bd619955c6c94d7aa94dcc04c4993a54625f2821cd68d2ec472bd96"
     end
   end
 
