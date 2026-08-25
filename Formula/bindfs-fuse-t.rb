@@ -28,6 +28,14 @@ class BindfsFuseT < Formula
     system "make", "install"
   end
 
+  def caveats
+    <<~EOS
+      To enable `mount -t bindfs` / /etc/fstab support, run:
+        sudo mkdir -p /Library/Filesystems/bindfs.fs/Contents/Resources
+        sudo ln -sf #{bin}/bindfs /Library/Filesystems/bindfs.fs/Contents/Resources/mount_bindfs
+    EOS
+  end
+
   test do
     assert_match version.to_s, shell_output("#{bin}/bindfs --version")
   end
