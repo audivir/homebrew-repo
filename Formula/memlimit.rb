@@ -6,18 +6,18 @@ class Memlimit < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/audivir/memlimit/releases/download/v#{version}/memlimit-darwin-arm64"
-      sha256 "d9427c27bd1b6b8d50ac312336d20600b44ce3fb04c790b7478b50280e83381e"
+      sha256 "29bb6f168d1a07002abffbb46fdbabb71393b91223ea5b61916636bc44aee4da"
     else
       url "https://github.com/audivir/memlimit/releases/download/v#{version}/memlimit-darwin-amd64"
-      sha256 "145937f89033ed2f5ce7a1f31f56564c2431a44754621a5451e5cbb4316be3d1"
+      sha256 "88eba1a9c031d7f0898fdd8f40a32c7700c8eb8d2ccdb8470ee4b8f0382dd3f3"
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/audivir/memlimit/releases/download/v#{version}/memlimit-linux-arm64"
-      sha256 "05d551a7ff3dcfac1d25e300320260a736fbe19592380f0609c67ca8ba2ef04e"
+      sha256 "d9647a14ee4544787e5b0e924ddf4b1e7792214b49aebe88dbaa2b793a3ab627"
     else
       url "https://github.com/audivir/memlimit/releases/download/v#{version}/memlimit-linux-amd64"
-      sha256 "eff560568fcdf9876362c9768ea1152219850a05a73df4231b3bb59011d8d817"
+      sha256 "3655075f12e691c548787bc35938836598a6836d7fe136300088df3f6cdd9f2c"
     end
   end
   
