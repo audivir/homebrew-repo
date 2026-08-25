@@ -23,7 +23,7 @@ class BindfsFuseT < Formula
     ENV.append_path "HOMEBREW_INCLUDE_PATHS", "/usr/local/include"
     ENV.append_path "PKG_CONFIG_PATH", "/usr/local/lib/pkgconfig"
     system "./autogen.sh"
-    system "./configure", *std_configure_args
+    system "./configure", "--disable-macos-fs-link", *std_configure_args
     system "make"
     system "make", "install"
   end
