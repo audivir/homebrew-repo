@@ -31,6 +31,6 @@ class MkpasswdGo < Formula
 
   test do
     # Updated to match our latest usage text
-    assert_match "dirdiff version #{version}", shell_output("#{bin}/dirdiff --version")
+    assert_match "mkpasswd-go version #{version}", shell_output("#{bin}/mkpasswd-go --version")
   end
 end
