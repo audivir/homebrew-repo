@@ -31,6 +31,6 @@ class MkpasswdGo < Formula
 
   test do
     # Updated to match our latest usage text
-    assert_match "mkpasswd-go version #{version}", shell_output("#{bin}/mkpasswd-go --version")
+    assert_match "mkpasswd-go version v#{version}", shell_output("#{bin}/mkpasswd-go --version")
   end
 end
