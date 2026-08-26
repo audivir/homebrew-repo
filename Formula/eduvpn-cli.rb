@@ -1,8 +1,8 @@
 class EduvpnCli < Formula
   desc "Command-line client for eduVPN"
   homepage "https://codeberg.org/eduVPN/eduvpn-common"
-  url "https://codeberg.org/eduVPN/eduvpn-common/archive/4.0.0.tar.gz"
-  sha256 "5708cb51a99a274ae6b2207bfbebfc61d31d67e57e6f75e472a99537055f4c9d"
+  url "https://codeberg.org/eduVPN/eduvpn-common/archive/5.0.3.tar.gz"
+  sha256 "41e9daf6c6826aa238da7891d43afeed2e892e7e770f958951de22d5c68c7b66"
   license "GPL-3.0-or-later"
 
   depends_on "go" => :build
