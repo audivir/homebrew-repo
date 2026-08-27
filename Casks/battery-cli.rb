@@ -6,7 +6,7 @@ cask "battery-cli" do
   version "1.3.4"
   url "https://github.com/audivir/battery-cli/archive/refs/tags/v#{version}.tar.gz"
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: :catalina
   depends_on arch: :arm64
   depends_on formula: "smc"
 
