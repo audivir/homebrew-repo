@@ -1,8 +1,8 @@
 class Smc < Formula
-  desc "Control the fans of every Intel Mac to make it run cooler"
+  desc "CLI for reading/writing Apple System Management Controller (SMC) keys"
   homepage "https://github.com/hholtmann/smcFanControl"
   url "https://github.com/hholtmann/smcFanControl/archive/refs/tags/2.6.tar.gz"
-  version "0.01"
+  version "2.6"
   sha256 "2ede743d324367ddf8a1a2b83efcdb92bf2f14ed2c88c1d63dedfbc83f706cfa"
   license "GPL-2.0-or-later"
 
