@@ -24,8 +24,8 @@ cask "battery-cli" do
     system_command "#{HOMEBREW_PREFIX}/bin/battery",
                  args: ["uninstall", "silent"],
                  sudo: true
-    system_command "/usr/bin/pkill",
-                args: ["-f", "#{HOMEBREW_PREFIX}/bin/battery"]
+    system_command "/bin/sh", 
+     			 args: ["-c", "/usr/bin/pkill -f '#{HOMEBREW_PREFIX}/bin/battery' || true"]
   end
 
   zap trash: [
