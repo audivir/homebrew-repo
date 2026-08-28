@@ -1,20 +1,20 @@
 class MkpasswdGo < Formula
   desc "Go-clone of whois' mkpasswd utility"
   homepage "https://github.com/audivir/mkpasswd-go"
-  version "1.0.1"
+  version "1.0.2"
 
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/audivir/mkpasswd-go/releases/download/v#{version}/mkpasswd-go-darwin-arm64"
-      sha256 "e679e5fde639a971e460da1ac808fe42bba3a5b0f194c71b2a1be7e4f835fbc1"
+      sha256 "3f04a68c4c37edf22a1717fe3f1d759b3823009f6e8766b77d187d2ee938bf45"
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/audivir/mkpasswd-go/releases/download/v#{version}/mkpasswd-go-linux-arm64"
-      sha256 "772fbe7207bb02ccd6a3183c1667efe59a5910e01aba7cb252bc1e33c1fb77bc"
+      sha256 "b7fe4312bf25e5cc972fb83a6eab71743713ff3b19c0ddb22e503edabc825ad1"
     else
       url "https://github.com/audivir/mkpasswd-go/releases/download/v#{version}/mkpasswd-go-linux-amd64"
-      sha256 "472c8acca11023d81f0b43b49ea8ac6dc58a2164b7770c28a114d4b72cc410e9"
+      sha256 "6c9a46b25e664e13818086c19d05690abed3f45c0f8564c9e8afe36c665827dc"
     end
   end
 
