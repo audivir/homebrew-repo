@@ -19,6 +19,7 @@ class Kv < Formula
   end
 
   depends_on "libpdfium"
+  depends_on "libheif"
 
   def install
     # Rename to just 'kv'
