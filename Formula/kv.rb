@@ -1,20 +1,20 @@
 class Kv < Formula
   desc "Image viewer for the Kitty Terminal Graphics Protocol"
   homepage "https://github.com/audivir/kv"
-  version "0.2.7"
+  version "0.2.8"
 
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/audivir/kv/releases/download/v#{version}/kv-aarch64-apple-darwin"
-      sha256 "92ab3f69d04b39d60d7e003a0b384eb312e3328d510f7b63d641cf057a6cb57f"
+      sha256 "df7befb91eecbe5c825dda30fb0f2d981a2f6452b4da162043f60b2e542e8518"
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/audivir/kv/releases/download/v#{version}/kv-aarch64-unknown-linux-gnu"
-      sha256 "27a960a84a313a338a0fce0898c5a1ca46a56c1dd4a23f8a67c47ddf2159e9a9"
+      sha256 "5440ed33d0e2901043b82a1426db3e14a607262106c8d994972975632388ea1e"
     else
       url "https://github.com/audivir/kv/releases/download/v#{version}/kv-x86_64-unknown-linux-gnu"
-      sha256 "916828469a187e3f3417e6b0b7bc3626839765e4e1768bdb0faf02634a5863ff"
+      sha256 "8ff1b22bf0670817221b3c6c63b339edb4ca067f6d965ce1e0605a192293806f"
     end
   end
 
