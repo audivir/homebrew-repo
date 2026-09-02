@@ -25,12 +25,11 @@ class MkpasswdGo < Formula
     else
       Hardware::CPU.arm? ? "mkpasswd-go-linux-arm64" : "mkpasswd-go-linux-amd64"
     end
-  
+
     bin.install binary_name => "mkpasswd-go"
   end
 
   test do
-    # Updated to match our latest usage text
     assert_match "mkpasswd-go version v#{version}", shell_output("#{bin}/mkpasswd-go --version")
   end
 end

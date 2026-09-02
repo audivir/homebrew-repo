@@ -33,7 +33,6 @@ class Findcopies < Formula
   end
 
   test do
-    # Updated to match our latest usage text
     assert_match "findcopies version v#{version}", shell_output("#{bin}/findcopies --version")
   end
 end
