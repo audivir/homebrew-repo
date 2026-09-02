@@ -2,6 +2,8 @@ class Kv < Formula
   desc "Image viewer for the Kitty Terminal Graphics Protocol"
   homepage "https://github.com/audivir/kv"
   version "0.2.8"
+  depends_on "libpdfium"
+  depends_on "libheif"
 
   if OS.mac?
     if Hardware::CPU.arm?
@@ -18,9 +20,6 @@ class Kv < Formula
     end
   end
 
-  depends_on "libpdfium"
-  depends_on "libheif"
-
   def install
     # Rename to just 'kv'
     binary_name = if OS.mac?
@@ -33,10 +32,8 @@ class Kv < Formula
   end
 
   def caveats
-    <<~EOS
-      For full functionality, you may need to install libreoffice:
-        brew install libreoffice
-    EOS
+    "For full functionality, you may need to install libreoffice:
+    brew install libreoffice"
   end
 
   test do

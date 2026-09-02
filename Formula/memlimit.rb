@@ -20,7 +20,7 @@ class Memlimit < Formula
       sha256 "3655075f12e691c548787bc35938836598a6836d7fe136300088df3f6cdd9f2c"
     end
   end
-  
+
   def install
     # Rename to just 'memlimit'
     binary_name = if OS.mac?
@@ -33,7 +33,6 @@ class Memlimit < Formula
   end
 
   test do
-    # Updated to match our latest usage text
     assert_match "memlimit version v#{version}", shell_output("#{bin}/memlimit --version")
   end
 end
