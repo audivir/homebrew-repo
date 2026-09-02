@@ -2,6 +2,7 @@ class Kv < Formula
   desc "Image viewer for the Kitty Terminal Graphics Protocol"
   homepage "https://github.com/audivir/kv"
   version "0.2.8"
+
   depends_on "libpdfium"
   depends_on "libheif"
 
@@ -32,8 +33,10 @@ class Kv < Formula
   end
 
   def caveats
-    "For full functionality, you may need to install libreoffice:
-    brew install libreoffice"
+    <<~EOS
+      For full functionality, you may need to install libreoffice:
+          brew install libreoffice
+    EOS
   end
 
   test do
