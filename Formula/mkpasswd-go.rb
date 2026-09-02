@@ -6,15 +6,15 @@ class MkpasswdGo < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/audivir/mkpasswd-go/releases/download/v#{version}/mkpasswd-go-darwin-arm64"
-      sha256 "3f04a68c4c37edf22a1717fe3f1d759b3823009f6e8766b77d187d2ee938bf45"
+      sha256 "bfde5cebcad9dd150a40375c46092a065abe66a7e33a240fd544ffa89f3c13ae"
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/audivir/mkpasswd-go/releases/download/v#{version}/mkpasswd-go-linux-arm64"
-      sha256 "b7fe4312bf25e5cc972fb83a6eab71743713ff3b19c0ddb22e503edabc825ad1"
+      sha256 "7cc1aca91ad71413002a42397562bad00658b5da8ac78ab64b805149eaa33a9a"
     else
       url "https://github.com/audivir/mkpasswd-go/releases/download/v#{version}/mkpasswd-go-linux-amd64"
-      sha256 "6c9a46b25e664e13818086c19d05690abed3f45c0f8564c9e8afe36c665827dc"
+      sha256 "e65b7c89605cf9c9f3895e78b9131016930196b3f8f5962a4d375f42eb218be0"
     end
   end
 
