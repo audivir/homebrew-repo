@@ -2,8 +2,8 @@ cask "battery-cli" do
   name "Battery CLI"
   desc "CLI for managing battery charging."
   homepage "https://github.com/audivir/battery-cli/"
-  sha256 "62850fe3fe354e791b14bc916e6eb4819b250a7db2b4dbe641ac5f0bb09eca5b"
-  version "1.3.4"
+  sha256 "063fcb15419c1c06182565ecdeab6c29c251c3592e7be2cd13c67e49635800f8"
+  version "1.3.5"
   url "https://github.com/audivir/battery-cli/archive/refs/tags/v#{version}.tar.gz"
 
   depends_on macos: :big_sur

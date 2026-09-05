@@ -1,6 +1,6 @@
 cask "skyx" do
     version "26.1.2"
-    sha256 "823f192eb0bb505b8f69b65ee16ba35d9e35ef2159fbe68266d19048ec7faeee"
+    sha256 "ac0c32ba60655db22ea27e5ea42cc3b6ce6d5b7959ddacca33f663c29f05cf4f"
 
     url "https://desktopclient.ott.sky.com/skygodesktop/AT/SkyXInstaller.zip"
     name "Sky X Desktop"
