@@ -21,7 +21,8 @@ cask "battery-cli" do
   uninstall_preflight_steps do
     run "{{HOMEBREW_PREFIX}}/bin/battery",
       args: ["uninstall", "silent"],
-      sudo: true
+      sudo: true,
+      must_succeed: false
     run "/bin/sh",
       args: ["-c", "/usr/bin/pkill -f '{{HOMEBREW_PREFIX}}/bin/battery' || true"]
   end
