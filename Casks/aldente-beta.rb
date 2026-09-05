@@ -2,8 +2,7 @@ cask "aldente-beta" do
   version "1.36.3"
   sha256 "44b5892ba2b44433822bea10134944c1e33215df7698304c5e116103780d83d7"
 
-  url "https://github.com/AppHouseKitchen/AlDente-Charge-Limiter/releases/download/#{version}/AlDente.dmg",
-    verified: "github.com/AppHouseKitchen/AlDente-Charge-Limiter"
+  url "https://github.com/AppHouseKitchen/AlDente-Charge-Limiter/releases/download/#{version}/AlDente.dmg"
 
   name "AlDente"
   desc "Menu bar tool to limit maximum charging percentage"

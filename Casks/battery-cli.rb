@@ -13,19 +13,17 @@ cask "battery-cli" do
   binary "#{staged_path}/battery-cli-#{version}/battery.sh", target: "battery"
 
   postflight_steps do
-    curr_user = ENV["USER"]
-
-    system_command "#{HOMEBREW_PREFIX}/bin/battery",
-                 args: ["visudo", "#{curr_user}"],
-                 sudo: true
+    run "{{HOMEBREW_PREFIX}}/bin/battery",
+      args: ["visudo", "{{user}}"],
+      sudo: true
   end
 
   uninstall_preflight_steps do
-    system_command "#{HOMEBREW_PREFIX}/bin/battery",
-                 args: ["uninstall", "silent"],
-                 sudo: true
-    system_command "/bin/sh", 
-     			 args: ["-c", "/usr/bin/pkill -f '#{HOMEBREW_PREFIX}/bin/battery' || true"]
+    run "{{HOMEBREW_PREFIX}}/bin/battery",
+      args: ["uninstall", "silent"],
+      sudo: true
+    run "/bin/sh",
+      args: ["-c", "/usr/bin/pkill -f '{{HOMEBREW_PREFIX}}/bin/battery' || true"]
   end
 
   zap trash: [
