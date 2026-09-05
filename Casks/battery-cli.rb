@@ -12,7 +12,7 @@ cask "battery-cli" do
 
   binary "#{staged_path}/battery-cli-#{version}/battery.sh", target: "battery"
 
-  postflight do
+  postflight_steps do
     curr_user = ENV["USER"]
 
     system_command "#{HOMEBREW_PREFIX}/bin/battery",
@@ -20,7 +20,7 @@ cask "battery-cli" do
                  sudo: true
   end
 
-  uninstall_preflight do
+  uninstall_preflight_steps do
     system_command "#{HOMEBREW_PREFIX}/bin/battery",
                  args: ["uninstall", "silent"],
                  sudo: true
