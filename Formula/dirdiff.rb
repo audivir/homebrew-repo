@@ -30,6 +30,7 @@ class Dirdiff < Formula
     end
 
     bin.install binary_name => "dirdiff"
+    generate_completions_from_executable(bin/"dirdiff", "--gen-completions")
   end
 
   test do
