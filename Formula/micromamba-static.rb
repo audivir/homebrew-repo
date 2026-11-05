@@ -1,24 +1,24 @@
 class MicromambaStatic < Formula
   desc "Fast Cross-Platform Package Manager"
   homepage "https://github.com/mamba-org/mamba"
-  version "2.9.0-0"
+  version "2.10.0-0"
   license "BSD-3-Clause"
 
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/mamba-org/micromamba-releases/releases/download/#{version}/micromamba-osx-arm64.tar.bz2"
-      sha256 "500f5074feb8d02c4296ef9921c3650ed2874171805a9fbb8fbb53896433646b"
+      sha256 "acef4eaab19ec2174ad5a449e5aad981ca326270db819502ff096a92fc31caa6"
     else
       url "https://github.com/mamba-org/micromamba-releases/releases/download/#{version}/micromamba-osx-64.tar.bz2"
-      sha256 "0426ecdc41636d369f57b8fe6acbf4385a69eca45b56d9ee7d3a840a9965d44f"
+      sha256 "17b20c4271d65c030a5c86788f5ca86eb575187209f626edabdb8c6a875c6838"
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/mamba-org/micromamba-releases/releases/download/#{version}/micromamba-linux-aarch64.tar.bz2"
-      sha256 "e705ffeed90ce0659eb546e4b1e1028c9eaf0bc9cc854867b19ac5ce0ba5852f"
+      sha256 "890bc4906e6ab17f1b393f0da21547f75e000078e573a156316ec925b92a4a4c"
     else
       url "https://github.com/mamba-org/micromamba-releases/releases/download/#{version}/micromamba-linux-64.tar.bz2"
-      sha256 "8761c382127e6363bd9e0a2451aa3ef90d071a79133f736e2f759a3bf13040dd"
+      sha256 "9a97976244929bbae28fb1fae504e74a3e7e6d1932870e3a03321f01b7fbd07b"
     end
   end
 
