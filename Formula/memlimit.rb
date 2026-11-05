@@ -1,30 +1,27 @@
 class Memlimit < Formula
   desc "Watches a process tree and terminates it if the memory reaches a limit"
   homepage "https://github.com/audivir/memlimit"
-  version "0.1.1"
+  version "0.1.4"
 
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/audivir/memlimit/releases/download/v#{version}/memlimit-darwin-arm64"
-      sha256 "29bb6f168d1a07002abffbb46fdbabb71393b91223ea5b61916636bc44aee4da"
-    else
-      url "https://github.com/audivir/memlimit/releases/download/v#{version}/memlimit-darwin-amd64"
-      sha256 "88eba1a9c031d7f0898fdd8f40a32c7700c8eb8d2ccdb8470ee4b8f0382dd3f3"
+      sha256 "006ebbd41577460dc6bfbdd237d6b957adfb441c6b3959680d31b2ff2c2fd547"
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/audivir/memlimit/releases/download/v#{version}/memlimit-linux-arm64"
-      sha256 "d9647a14ee4544787e5b0e924ddf4b1e7792214b49aebe88dbaa2b793a3ab627"
+      sha256 "60c764163e1b24166c50276450397dc5750af41d2e898b6de04e50c6afd9f83c"
     else
       url "https://github.com/audivir/memlimit/releases/download/v#{version}/memlimit-linux-amd64"
-      sha256 "3655075f12e691c548787bc35938836598a6836d7fe136300088df3f6cdd9f2c"
+      sha256 "61a3c8aaa5279059cffdc48356aba50a20f3516ecfd00c8d1ff3f26eed6d49e5"
     end
   end
 
   def install
     # Rename to just 'memlimit'
     binary_name = if OS.mac?
-      Hardware::CPU.arm? ? "memlimit-darwin-arm64" : "memlimit-darwin-amd64"
+      "memlimit-darwin-arm64"
     else
       Hardware::CPU.arm? ? "memlimit-linux-arm64" : "memlimit-linux-amd64"
     end

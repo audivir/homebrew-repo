@@ -1,30 +1,27 @@
 class Findcopies < Formula
   desc "Recursively find copies of files in a directory"
   homepage "https://github.com/audivir/findcopies"
-  version "0.1.1"
+  version "0.1.4"
 
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/audivir/findcopies/releases/download/v#{version}/findcopies-darwin-arm64"
-      sha256 "9803afcab1d4cab50997cea1ef25b9777b07003cdfb021ba80a5310cdad7c7bf"
-    else
-      url "https://github.com/audivir/findcopies/releases/download/v#{version}/findcopies-darwin-amd64"
-      sha256 "25f1240a29bb4dbc8bc592c7322b3fb84f5cc7714a29c695887c3980a90b4682"
+      sha256 "4d67b4d6babf308b73a7e21869f059031da21cbec78632dd350ee693f2dea124"
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/audivir/findcopies/releases/download/v#{version}/findcopies-linux-arm64"
-      sha256 "1cf2acccd283a9f8d0b6fcfd521691d525491995a47433cb73212b99c0e3d817"
+      sha256 "dc5b5325d26e7c87277b01537d8bdc08f03140ac58bfc5c74ec04016d1a131ea"
     else
       url "https://github.com/audivir/findcopies/releases/download/v#{version}/findcopies-linux-amd64"
-      sha256 "6bd03300b9faef679ecfb34059ed6290100178581b1d86cd123697bc3c26ba55"
+      sha256 "f835a808e63f928b8b85fc3b6aa8a100b305b703fb90f6d4334c346abcaae43e"
     end
   end
 
   def install
     # Rename to just 'findcopies'
     binary_name = if OS.mac?
-      Hardware::CPU.arm? ? "findcopies-darwin-arm64" : "findcopies-darwin-amd64"
+      "findcopies-darwin-arm64"
     else
       Hardware::CPU.arm? ? "findcopies-linux-arm64" : "findcopies-linux-amd64"
     end
