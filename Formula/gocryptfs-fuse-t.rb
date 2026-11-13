@@ -1,11 +1,11 @@
 class GocryptfsFuseT < Formula
   desc "Encrypted overlay filesystem written in Go (FUSE-T build)"
   homepage "https://github.com/audivir/gocryptfs"
-  # gocryptfs v2.7.0 + listxattr fix + fuse.Caller port; go.mod replaces
-  # go-fuse with audivir/go-fuse (upstream 6018575 + FUSE-T support).
+  # gocryptfs v2.7.0 + listxattr + fsck fixes + fuse.Caller port; go.mod replaces
+  # go-fuse with audivir/go-fuse (upstream 6018575 + FUSE-T support, -ko namedattr opt-in).
   url "https://github.com/audivir/gocryptfs.git",
-    tag:      "v2.7.0-fuset3",
-    revision: "f091b3488e8f27bfc9ded7e2dec332d10181af9b"
+    tag:      "v2.7.0-fuset4",
+    revision: "69c8fb57f7c20562d13820b25d6bd3e4ebf5f474"
   version "2.7.0"
   license "MIT"
 
