@@ -4,8 +4,8 @@ class GocryptfsFuseT < Formula
   # gocryptfs v2.7.0 + listxattr fix + fuse.Caller port; go.mod replaces
   # go-fuse with audivir/go-fuse (upstream 6018575 + FUSE-T support).
   url "https://github.com/audivir/gocryptfs.git",
-    tag:      "v2.7.0-fuset2",
-    revision: "7e6680927e60e4c523c35d45950dc793a74fb7da"
+    tag:      "v2.7.0-fuset3",
+    revision: "f091b3488e8f27bfc9ded7e2dec332d10181af9b"
   version "2.7.0"
   license "MIT"
 
